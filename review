@@ -1,0 +1,19 @@
+初始化应用:
+    1,python3 manage.py startapp 应用名
+    2,
+
+分布式路由
+    1,主路由 mysite3/mysite/urls.py 配置路由
+        url(r'^music',include('应用名.应用下的路由配置文件名'))
+        url(r'^music',include('music.urls'))
+    2,具体应用中,有具体应用的urls
+
+静态文件
+
+    1.setting.py中  配置如下配置
+    STATIC_URL = '/static'->页面中写静态文件url时,端口后面的路径
+    :8000/static/a.jpg
+    2.STAICFILES_DIRS=(os.path.join(BASE_DIR,'static'),)->在服务器端静态文件的存储路径
+      在HTML中写静态文件url
+        img='/static/img/123.jpg'
+

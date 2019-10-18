@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="/bookstore/update_book/{{ book.title }}" method='post'>
+    <p> 书名:{{ book.title }}</p>
+    <p>
+        零售价 <input type="text" value="{{ book.marker_price }}" name="m_price">
+    </p>
+    <p>
+        <input type="submit" value="修改">
+    </p>
+    </form>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table,td{
+            border:1px solid black
+        }
+        table{
+         border-spacing :0px}
+
+        td{
+            width:100px
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>title</td>
+            <td>price</td>
+            <td>m_price</td>
+            <td>pub</td>
+            <td>op</td>
+        </tr>
+<!--        {{ dic }}-->
+        {% for i in all_info %}
+        <tr>
+            <td> {{ i.title }} </td>
+            <td>{{ i.price }}</td>
+            <td>{{ i.marker_price }}</td>
+            <td>{{ i.pub }}</td>
+            <td> <a href="/bookstore/detail/{{ i.title }} ">更新</a>
+                <a href="/bookstore/delete/{{ i.title }}">删除</a>
+            </td>
+        </tr>
+        {% endfor %}
+
+    </table>
+</body>
+</html>
